@@ -18,6 +18,8 @@ E-mail: msplanchard@gmail.com
 ### What is pypiserver?
 * Minimal, lightweight server
 * Works with pip & standard Python install tools
+* [PyPI Page](https://pypi.python.org/pypi/pypiserver)
+* [GitHub](https://github.com/pypiserver/pypiserver)
 
 ### Who is this talk for?
 * Custom application/library writers
