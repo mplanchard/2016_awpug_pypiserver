@@ -32,7 +32,7 @@ the **real** PyPI
 * This talk is not about packaging
 * Won't be covering 100% of functionality
 * There are other pacakges that do similar things
-    * Devpi
+    * devpi
     * [others](http://stackoverflow.com/questions/1235331/how-to-roll-my-own-pypi)
 
 
@@ -43,9 +43,13 @@ the **real** PyPI
 From a non-root user's home directory:
 
 > `pyvenv-3.4 .`
+
 > `source bin/activate`
+
 > `pip install pypiserver`
+
 > `mkdir packages`
+
 > `sudo bin/pypi-server -p 80 packages`
 
 We can now access pypiserver via a web browser (52.39.114.20)
@@ -58,15 +62,18 @@ The web interface should now reflect the presence of this package
 
 Let's install our package with pip from our local machine
 
-> `pip install --extra-index-url http://52.39.114.20/simple \`
-> `--trusted-host 52.39.114.20 awpug_sample_package`
+> `pip install --extra-index-url http://52.39.114.20/simple --trusted-host 52.39.114.20 awpug_sample_package`
+
 > `awpug`
 
 ### Enabling Uploads
 
 > `rm packages/awpug_sample_package-1.0.0-py3-none-any.whl`
+
 > `pip install passlib`
+
 > `htpasswd -sc htpasswd.txt pypi_user` (pypi_test as pw)
+
 > `sudo bin/pypi-server -p 80 -P htpasswd.txt packages`
 
 Configure `~/.pypirc` on the local machine:
@@ -101,6 +108,7 @@ And whether we can download something locally
 ### Mirroring PyPI packages
 
 > `cd packages`
+
 > `pip install -d . requests`
 
 From our local machine, let's handicap /etc/hosts so we can't access PyPI
