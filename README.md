@@ -1,6 +1,6 @@
 # Pypiserver
 
-2016-04-28 AWPUG Pypiserver Tal
+2016-04-28 AWPUG Pypiserver Talk
 
 Author: Matthew Planchard
 E-mail: msplanchard@gmail.com
